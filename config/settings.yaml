@@ -1,0 +1,12 @@
+data_source:
+  url: "https://archive.ics.uci.edu/ml/machine-learning-databases/00352/Online%20Retail.xlsx"
+
+pipeline:
+  expand_times: 10
+
+paths:
+  raw_data: "data/raw/"
+  processed_data: "data/processed/"
+
+database:
+  db_path: "data/processed/retail.db"
