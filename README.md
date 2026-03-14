@@ -50,13 +50,11 @@ The pipeline performs the following steps:
 6.Store the final dataset in Parquet format
 The pipeline architecture diagram is included in the docs/ folder.
 
-#Data Flow Diagram
-```markdown
-## Data Flow Diagram
+##Data Flow Diagram
 
 ![M2 Data Flow Diagram](docs/M2DataFlowDiagram.png)
 
-#Project Structure
+##Project Structure
 CS4265_Project_Jia_Liu/
 
 config/
@@ -94,14 +92,14 @@ requirements.txt
 README.md
 .gitignore
 
-#Big Data Simulation
+##Big Data Simulation
 The original Online Retail dataset is relatively small for Big Data analysis.
 To simulate larger-scale data processing:
 expand_times = 10
 The dataset is replicated multiple times to increase the number of records.
 This allows testing of the pipeline with larger datasets before implementing distributed processing frameworks in future milestones.
 
-#Storage Format
+##Storage Format
 Instead of SQLite, the pipeline stores the final dataset as Parquet format
 Advantages:
 Columnar storage
@@ -111,16 +109,16 @@ Compatible with Spark / Dask / distributed processing
 Output file:
 data/processed/online_retail_full.parquet
 
-#How to Run the pipeline
+##How to Run the pipeline
 
 1. **Clone the Repository**  
 git clone <repository-url>
 cd CS4265_Project_Jia_Liu
 
-#Install dependencies
+##Install dependencies
 pip install -r requirements.txt
 
-#Run the pipeline
+##Run the pipeline
 python src/main.py
 
 Pipeline output will include:
@@ -128,7 +126,7 @@ Pipeline output will include:
 -Processed dataset preview
 -Parquet dataset saved successfully
 
-#Evidence Screenshots
+##Evidence Screenshots
 
 The docs/ directory contains screenshots demonstrating the execution of the pipeline.
 Included evidence:
@@ -138,7 +136,7 @@ Sample processed records
 Parquet storage confirmation
 Full pipeline execution output
 
-#Next Steps (Milestone 3)
+##Next Steps (Milestone 3)
 Future development will focus on extending the pipeline to support scalable and production-ready data processing.
 Planned improvements:
 -Implement full data cleaning and validation
@@ -149,11 +147,11 @@ Planned improvements:
 -Implement automated tests for pipeline modules
 
 
-#Notes
+##Notes
 .venv is excluded via .gitignore
 Environment variables are managed through .env.example
 
-#Author
+##Author
 Jia Liu
 CS4265 Big Data Analytics Project
 Kennesaw States University
