@@ -1,12 +1,18 @@
-data_source:
-  url: "https://archive.ics.uci.edu/ml/machine-learning-databases/00352/Online%20Retail.xlsx"
+paths:
+  raw_data: data/raw
+  processed_data: data/processed
 
 pipeline:
   expand_times: 10
+  output_path: data/processed/online_retail_full.parquet 
 
-paths:
-  raw_data: "data/raw/"
-  processed_data: "data/processed/"
+data_sources:
 
-database:
-  db_path: "data/processed/retail.db"
+  - name: online_retail
+    url: https://archive.ics.uci.edu/ml/machine-learning-databases/00352/Online%20Retail.xlsx
+
+  - name: exchange_rates
+    url: https://api.exchangerate.host/latest
+
+  - name: country_metadata
+    path: data/raw/country_metadata.csv
