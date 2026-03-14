@@ -1,5 +1,10 @@
 # CS4265 Project - Online Retail Data Pipeline
 
+Milestone 1 – Proposal
+
+Milestone 2 – Initial Implementation(progress report)
+
+
 ## Project Description
 This project implements a data pipeline for large-scale retail transaction analysis using the Online Retail dataset from UCI.
 
@@ -46,35 +51,10 @@ The pipeline performs the following steps:
 The pipeline architecture diagram is included in the docs/ folder.
 
 #Data Flow Diagram
-flowchart TD
+```markdown
+## Data Flow Diagram
 
-%% Data Sources
-A[Online Retail Dataset<br>UCI Excel]
-B[Exchange Rate API<br>JSON]
-C[Country Metadata<br>CSV]
-
-%% Step 1 Download
-A -->|download_data downloads Excel| D[Raw Data<br>data/raw/online_retail.xlsx]
-
-%% Step 2 Expand
-D -->|expand_data replicates dataset x10| E[Expanded Dataset<br>online_retail_expanded.csv]
-
-%% Step 3 Fetch API
-B -->|API request returns exchange rates| F[Exchange Rates Data]
-
-%% Step 4 Load Metadata
-C -->|load CSV metadata| G[Country Metadata Loaded]
-
-%% Step 5 Merge
-E -->|merge datasets| H[Data Processing & Integration]
-F --> H
-G --> H
-
-%% Step 6 Storage
-H -->|save_to_parquet| I[Parquet Storage<br>data/processed/online_retail_full.parquet]
-
-classDef process fill:#f9f,stroke:#333,stroke-width:1px;
-class A,B,C,D,E,F,G,H,I process;
+![M2 Data Flow Diagram](docs/M2DataFlowDiagram.png)
 
 #Project Structure
 CS4265_Project_Jia_Liu/
