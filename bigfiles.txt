@@ -1,2 +1,0 @@
-data/processed/online_retail_big.csv
-data/processed/retail.db
