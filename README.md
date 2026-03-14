@@ -40,7 +40,7 @@ CountryCode/Region
 Format: CSV
 This dataset enriches the retail data with geographic information.
 
-#Data Pipeline Architecture
+##Data Pipeline Architecture
 The pipeline performs the following steps:
 1.Download the Online Retail dataset
 2.Expand the dataset to simulate larger scale data
